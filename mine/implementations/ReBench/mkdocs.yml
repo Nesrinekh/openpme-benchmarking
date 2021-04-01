@@ -1,0 +1,19 @@
+site_name: 'ReBench: Execute and Document Benchmarks Reproducibly'
+site_description: ReBench documentation
+site_author: 'ReBench contributors, see AUTHORS.md'
+
+pages:
+  - Home:           index.md
+  - Basic Concepts: concepts.md
+  - Usage:          usage.md
+  - Denoise:        denoise.md
+  - Configuration:  config.md
+  - Development:
+     - Extensions:    extensions.md
+     - Release Steps: release.md
+  - License:    LICENSE.md
+  - Change Log: CHANGELOG.md
+
+markdown_extensions:
+  - toc:
+      permalink: True

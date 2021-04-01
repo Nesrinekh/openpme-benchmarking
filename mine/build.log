@@ -1,0 +1,442 @@
+S:openpme|STD:/Library/Developer/CommandLineTools/usr/bin/make -C 1_lennard_jones/. clean all
+rm -f *.o *~ core md_dyn md_dyn_vl particles_*
+rm -f ../*~ core md_dyn md_dyn_vl ../particles_*
+mpic++ -O3 -g -c --std=c++14 -o main.o main.cpp -I -Wno-deprecated-declarations   -I.  -I/Users/khouzami/openfpm/openfpm_install/openfpm_numerics/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include/config -I/Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_data/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_vcluster/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_io/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_devices/include -I/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include  -I/Users/khouzami/openfpm/openfpm_dependencies/METIS/include -I/Users/khouzami/openfpm/openfpm_dependencies/PARMETIS/include -I/Users/khouzami/openfpm/openfpm_dependencies/BOOST/include -I/Users/khouzami/openfpm/openfpm_dependencies/HDF5/include -I/Users/khouzami/openfpm/openfpm_dependencies/LIBHILBERT/include   -I/Users/khouzami/openfpm/openfpm_dependencies/PETSC/include -I/Users/khouzami/openfpm/openfpm_dependencies/OPENBLAS/include -I/Users/khouzami/openfpm/openfpm_dependencies/SUITESPARSE/include -I/Users/khouzami/openfpm/openfpm_dependencies/EIGEN
+mpic++ -o md_dyn main.o  -L/Users/khouzami/openfpm/openfpm_install/openfpm_devices/lib -L/Users/khouzami/openfpm/openfpm_install/openfpm_pdata/lib  -L/Users/khouzami/openfpm/openfpm_install/openfpm_vcluster/lib -L/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/lib  -L/Users/khouzami/openfpm/openfpm_dependencies/METIS/lib -L/Users/khouzami/openfpm/openfpm_dependencies/PARMETIS/lib  -L/Users/khouzami/openfpm/openfpm_dependencies/BOOST/lib -L/Users/khouzami/openfpm/openfpm_dependencies/HDF5/lib -L/Users/khouzami/openfpm/openfpm_dependencies/LIBHILBERT/lib   -L/Users/khouzami/openfpm/openfpm_dependencies/PETSC/lib -L/Users/khouzami/openfpm/openfpm_dependencies/OPENBLAS/lib -L/Users/khouzami/openfpm/openfpm_dependencies/SUITESPARSE/lib  -lvcluster -lofpm_pdata -lofpmmemory -lparmetis -lmetis -lboost_iostreams -lboost_program_options -lhdf5 -llibhilbert -lVc   -lpetsc -lopenblas -lumfpack -lamd -lbtf -lcamd -lccolamd -lcholmod -lcolamd -lcxsparse -lklu -ldl -lrbio -lspqr -lsuitesparseconfig -ldl -lboost_filesystem -lboost_system -lboost_context
+/Library/Developer/CommandLineTools/usr/bin/make -C 2_gray_scott/. clean all
+rm -f *.o *~ core gray_scott *.vtk
+mpic++ -O3 -g -c --std=c++14 -o main.o main.cpp -I -Wno-deprecated-declarations   -I.  -I/Users/khouzami/openfpm/openfpm_install/openfpm_numerics/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include/config -I/Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_data/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_vcluster/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_io/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_devices/include -I/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include  -I/Users/khouzami/openfpm/openfpm_dependencies/METIS/include -I/Users/khouzami/openfpm/openfpm_dependencies/PARMETIS/include -I/Users/khouzami/openfpm/openfpm_dependencies/BOOST/include -I/Users/khouzami/openfpm/openfpm_dependencies/HDF5/include -I/Users/khouzami/openfpm/openfpm_dependencies/LIBHILBERT/include   -I/Users/khouzami/openfpm/openfpm_dependencies/PETSC/include -I/Users/khouzami/openfpm/openfpm_dependencies/OPENBLAS/include -I/Users/khouzami/openfpm/openfpm_dependencies/SUITESPARSE/include -I/Users/khouzami/openfpm/openfpm_dependencies/EIGEN
+mpic++ -o gray_scott main.o  -L/Users/khouzami/openfpm/openfpm_install/openfpm_devices/lib -L/Users/khouzami/openfpm/openfpm_install/openfpm_pdata/lib  -L/Users/khouzami/openfpm/openfpm_install/openfpm_vcluster/lib -L/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/lib  -L/Users/khouzami/openfpm/openfpm_dependencies/METIS/lib -L/Users/khouzami/openfpm/openfpm_dependencies/PARMETIS/lib  -L/Users/khouzami/openfpm/openfpm_dependencies/BOOST/lib -L/Users/khouzami/openfpm/openfpm_dependencies/HDF5/lib -L/Users/khouzami/openfpm/openfpm_dependencies/LIBHILBERT/lib   -L/Users/khouzami/openfpm/openfpm_dependencies/PETSC/lib -L/Users/khouzami/openfpm/openfpm_dependencies/OPENBLAS/lib -L/Users/khouzami/openfpm/openfpm_dependencies/SUITESPARSE/lib  -lvcluster -lofpm_pdata -lofpmmemory -lparmetis -lmetis -lboost_iostreams -lboost_program_options -lhdf5 -llibhilbert -lVc   -lpetsc -lopenblas -lumfpack -lamd -lbtf -lcamd -lccolamd -lcholmod -lcolamd -lcxsparse -lklu -ldl -lrbio -lspqr -lsuitesparseconfig -ldl -lboost_filesystem -lboost_system -lboost_context
+/Library/Developer/CommandLineTools/usr/bin/make -C 3_vortex_in_cell/. clean all
+rm -f *.o *~ core vic *.vtk check_point
+rm -f ../*~ core vic ../*.vtk ../check_point
+mpic++ -O3  -g -c --std=c++14 -o main_vic_petsc.o main_vic_petsc.cpp -I -Wno-deprecated-declarations   -I.  -I/Users/khouzami/openfpm/openfpm_install/openfpm_numerics/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include/config -I/Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_data/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_vcluster/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_io/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_devices/include -I/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include  -I/Users/khouzami/openfpm/openfpm_dependencies/METIS/include -I/Users/khouzami/openfpm/openfpm_dependencies/PARMETIS/include -I/Users/khouzami/openfpm/openfpm_dependencies/BOOST/include -I/Users/khouzami/openfpm/openfpm_dependencies/HDF5/include -I/Users/khouzami/openfpm/openfpm_dependencies/LIBHILBERT/include   -I/Users/khouzami/openfpm/openfpm_dependencies/PETSC/include -I/Users/khouzami/openfpm/openfpm_dependencies/OPENBLAS/include -I/Users/khouzami/openfpm/openfpm_dependencies/SUITESPARSE/include -I/Users/khouzami/openfpm/openfpm_dependencies/EIGEN
+mpic++ -o vic_petsc main_vic_petsc.o -L/Users/khouzami/openfpm/openfpm_install/openfpm_devices/lib -L/Users/khouzami/openfpm/openfpm_install/openfpm_pdata/lib  -L/Users/khouzami/openfpm/openfpm_install/openfpm_vcluster/lib -L/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/lib  -L/Users/khouzami/openfpm/openfpm_dependencies/METIS/lib -L/Users/khouzami/openfpm/openfpm_dependencies/PARMETIS/lib  -L/Users/khouzami/openfpm/openfpm_dependencies/BOOST/lib -L/Users/khouzami/openfpm/openfpm_dependencies/HDF5/lib -L/Users/khouzami/openfpm/openfpm_dependencies/LIBHILBERT/lib   -L/Users/khouzami/openfpm/openfpm_dependencies/PETSC/lib -L/Users/khouzami/openfpm/openfpm_dependencies/OPENBLAS/lib -L/Users/khouzami/openfpm/openfpm_dependencies/SUITESPARSE/lib  -lvcluster -lofpm_pdata -lofpmmemory -lparmetis -lmetis -lboost_iostreams -lboost_program_options -lhdf5 -llibhilbert -lVc   -lpetsc -lopenblas -lumfpack -lamd -lbtf -lcamd -lccolamd -lcholmod -lcolamd -lcxsparse -lklu -ldl -lrbio -lspqr -lsuitesparseconfig -ldl -lboost_filesystem -lboost_system -lboost_context
+make: Nothing to be done for `all'.
+S:openpme|ERR:In file included from main.cpp:3:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include/Grid/grid_dist_id.hpp:28:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid.hpp:21:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid_iterator_block.hpp:12:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid_chunk_copy.hpp:12:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/Vc:30:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/vector.h:35:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/sse/vector.h:496:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/scalar/../common/../sse/vector.tcc:30:
+/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/scalar/../common/../sse/../common/bitscanintrinsics.h:37:13: warning: '_bit_scan_forward' macro redefined [-Wmacro-redefined]
+#    define _bit_scan_forward(x) __builtin_ctz(x)
+            ^
+/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/ia32intrin.h:72:9: note: previous definition is here
+#define _bit_scan_forward(A) __bsfd((A))
+        ^
+In file included from main.cpp:3:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include/Grid/grid_dist_id.hpp:28:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid.hpp:21:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid_iterator_block.hpp:12:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid_chunk_copy.hpp:12:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/Vc:30:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/vector.h:35:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/sse/vector.h:496:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/scalar/../common/../sse/vector.tcc:30:
+/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/scalar/../common/../sse/../common/bitscanintrinsics.h:44:13: warning: '_bit_scan_reverse' macro redefined [-Wmacro-redefined]
+#    define _bit_scan_reverse(x) _Vc_bit_scan_reverse_asm(x)
+            ^
+/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/ia32intrin.h:73:9: note: previous definition is here
+#define _bit_scan_reverse(A) __bsrd((A))
+        ^
+2 warnings generated.
+In file included from main.cpp:3:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include/Grid/grid_dist_id.hpp:28:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid.hpp:21:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid_iterator_block.hpp:12:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid_chunk_copy.hpp:12:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/Vc:30:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/vector.h:35:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/sse/vector.h:496:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/scalar/../common/../sse/vector.tcc:30:
+/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/scalar/../common/../sse/../common/bitscanintrinsics.h:37:13: warning: '_bit_scan_forward' macro redefined [-Wmacro-redefined]
+#    define _bit_scan_forward(x) __builtin_ctz(x)
+            ^
+/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/ia32intrin.h:72:9: note: previous definition is here
+#define _bit_scan_forward(A) __bsfd((A))
+        ^
+In file included from main.cpp:3:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include/Grid/grid_dist_id.hpp:28:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid.hpp:21:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid_iterator_block.hpp:12:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid_chunk_copy.hpp:12:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/Vc:30:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/vector.h:35:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/sse/vector.h:496:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/scalar/../common/../sse/vector.tcc:30:
+/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/scalar/../common/../sse/../common/bitscanintrinsics.h:44:13: warning: '_bit_scan_reverse' macro redefined [-Wmacro-redefined]
+#    define _bit_scan_reverse(x) _Vc_bit_scan_reverse_asm(x)
+            ^
+/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/ia32intrin.h:73:9: note: previous definition is here
+#define _bit_scan_reverse(A) __bsrd((A))
+        ^
+2 warnings generated.
+In file included from main_vic_petsc.cpp:3:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include/Grid/grid_dist_id.hpp:28:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid.hpp:21:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid_iterator_block.hpp:12:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid_chunk_copy.hpp:12:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/Vc:30:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/vector.h:35:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/sse/vector.h:496:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/scalar/../common/../sse/vector.tcc:30:
+/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/scalar/../common/../sse/../common/bitscanintrinsics.h:37:13: warning: '_bit_scan_forward' macro redefined [-Wmacro-redefined]
+#    define _bit_scan_forward(x) __builtin_ctz(x)
+            ^
+/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/ia32intrin.h:72:9: note: previous definition is here
+#define _bit_scan_forward(A) __bsfd((A))
+        ^
+In file included from main_vic_petsc.cpp:3:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include/Grid/grid_dist_id.hpp:28:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid.hpp:21:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid_iterator_block.hpp:12:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid_chunk_copy.hpp:12:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/Vc:30:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/vector.h:35:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/sse/vector.h:496:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/scalar/../common/../sse/vector.tcc:30:
+/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/scalar/../common/../sse/../common/bitscanintrinsics.h:44:13: warning: '_bit_scan_reverse' macro redefined [-Wmacro-redefined]
+#    define _bit_scan_reverse(x) _Vc_bit_scan_reverse_asm(x)
+            ^
+/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/ia32intrin.h:73:9: note: previous definition is here
+#define _bit_scan_reverse(A) __bsrd((A))
+        ^
+2 warnings generated.
+S:openfpm|STD:/Library/Developer/CommandLineTools/usr/bin/make -C 1_lennard_jones/. clean all
+rm -f *.o *~ core md_dyn md_dyn_vl particles_*
+rm -f ../*~ core md_dyn md_dyn_vl ../particles_*
+mpic++ -O3 -g -c --std=c++14 -o main.o main.cpp -I -Wno-deprecated-declarations   -I.  -I/Users/khouzami/openfpm/openfpm_install/openfpm_numerics/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include/config -I/Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_data/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_vcluster/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_io/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_devices/include -I/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include  -I/Users/khouzami/openfpm/openfpm_dependencies/METIS/include -I/Users/khouzami/openfpm/openfpm_dependencies/PARMETIS/include -I/Users/khouzami/openfpm/openfpm_dependencies/BOOST/include -I/Users/khouzami/openfpm/openfpm_dependencies/HDF5/include -I/Users/khouzami/openfpm/openfpm_dependencies/LIBHILBERT/include   -I/Users/khouzami/openfpm/openfpm_dependencies/PETSC/include -I/Users/khouzami/openfpm/openfpm_dependencies/OPENBLAS/include -I/Users/khouzami/openfpm/openfpm_dependencies/SUITESPARSE/include -I/Users/khouzami/openfpm/openfpm_dependencies/EIGEN
+mpic++ -o md_dyn main.o  -L/Users/khouzami/openfpm/openfpm_install/openfpm_devices/lib -L/Users/khouzami/openfpm/openfpm_install/openfpm_pdata/lib  -L/Users/khouzami/openfpm/openfpm_install/openfpm_vcluster/lib -L/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/lib  -L/Users/khouzami/openfpm/openfpm_dependencies/METIS/lib -L/Users/khouzami/openfpm/openfpm_dependencies/PARMETIS/lib  -L/Users/khouzami/openfpm/openfpm_dependencies/BOOST/lib -L/Users/khouzami/openfpm/openfpm_dependencies/HDF5/lib -L/Users/khouzami/openfpm/openfpm_dependencies/LIBHILBERT/lib   -L/Users/khouzami/openfpm/openfpm_dependencies/PETSC/lib -L/Users/khouzami/openfpm/openfpm_dependencies/OPENBLAS/lib -L/Users/khouzami/openfpm/openfpm_dependencies/SUITESPARSE/lib  -lvcluster -lofpm_pdata -lofpmmemory -lparmetis -lmetis -lboost_iostreams -lboost_program_options -lhdf5 -llibhilbert -lVc   -lpetsc -lopenblas -lumfpack -lamd -lbtf -lcamd -lccolamd -lcholmod -lcolamd -lcxsparse -lklu -ldl -lrbio -lspqr -lsuitesparseconfig -ldl -lboost_filesystem -lboost_system -lboost_context
+mpic++ -O3 -g -c --std=c++14 -o main_vl.o main_vl.cpp -I -Wno-deprecated-declarations   -I.  -I/Users/khouzami/openfpm/openfpm_install/openfpm_numerics/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include/config -I/Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_data/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_vcluster/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_io/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_devices/include -I/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include  -I/Users/khouzami/openfpm/openfpm_dependencies/METIS/include -I/Users/khouzami/openfpm/openfpm_dependencies/PARMETIS/include -I/Users/khouzami/openfpm/openfpm_dependencies/BOOST/include -I/Users/khouzami/openfpm/openfpm_dependencies/HDF5/include -I/Users/khouzami/openfpm/openfpm_dependencies/LIBHILBERT/include   -I/Users/khouzami/openfpm/openfpm_dependencies/PETSC/include -I/Users/khouzami/openfpm/openfpm_dependencies/OPENBLAS/include -I/Users/khouzami/openfpm/openfpm_dependencies/SUITESPARSE/include -I/Users/khouzami/openfpm/openfpm_dependencies/EIGEN
+mpic++ -o md_dyn_vl main_vl.o  -L/Users/khouzami/openfpm/openfpm_install/openfpm_devices/lib -L/Users/khouzami/openfpm/openfpm_install/openfpm_pdata/lib  -L/Users/khouzami/openfpm/openfpm_install/openfpm_vcluster/lib -L/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/lib  -L/Users/khouzami/openfpm/openfpm_dependencies/METIS/lib -L/Users/khouzami/openfpm/openfpm_dependencies/PARMETIS/lib  -L/Users/khouzami/openfpm/openfpm_dependencies/BOOST/lib -L/Users/khouzami/openfpm/openfpm_dependencies/HDF5/lib -L/Users/khouzami/openfpm/openfpm_dependencies/LIBHILBERT/lib   -L/Users/khouzami/openfpm/openfpm_dependencies/PETSC/lib -L/Users/khouzami/openfpm/openfpm_dependencies/OPENBLAS/lib -L/Users/khouzami/openfpm/openfpm_dependencies/SUITESPARSE/lib  -lvcluster -lofpm_pdata -lofpmmemory -lparmetis -lmetis -lboost_iostreams -lboost_program_options -lhdf5 -llibhilbert -lVc   -lpetsc -lopenblas -lumfpack -lamd -lbtf -lcamd -lccolamd -lcholmod -lcolamd -lcxsparse -lklu -ldl -lrbio -lspqr -lsuitesparseconfig -ldl -lboost_filesystem -lboost_system -lboost_context
+/Library/Developer/CommandLineTools/usr/bin/make -C 2_gray_scott/. clean all
+rm -f *.o *~ core gray_scott *.vtk
+rm -f ../*~ ../*.vtk
+mpic++ -O3 -g -c --std=c++14 -o main.o main.cpp -I -Wno-deprecated-declarations   -I.  -I/Users/khouzami/openfpm/openfpm_install/openfpm_numerics/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include/config -I/Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_data/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_vcluster/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_io/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_devices/include -I/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include  -I/Users/khouzami/openfpm/openfpm_dependencies/METIS/include -I/Users/khouzami/openfpm/openfpm_dependencies/PARMETIS/include -I/Users/khouzami/openfpm/openfpm_dependencies/BOOST/include -I/Users/khouzami/openfpm/openfpm_dependencies/HDF5/include -I/Users/khouzami/openfpm/openfpm_dependencies/LIBHILBERT/include   -I/Users/khouzami/openfpm/openfpm_dependencies/PETSC/include -I/Users/khouzami/openfpm/openfpm_dependencies/OPENBLAS/include -I/Users/khouzami/openfpm/openfpm_dependencies/SUITESPARSE/include -I/Users/khouzami/openfpm/openfpm_dependencies/EIGEN
+mpic++ -o gray_scott main.o  -L/Users/khouzami/openfpm/openfpm_install/openfpm_devices/lib -L/Users/khouzami/openfpm/openfpm_install/openfpm_pdata/lib  -L/Users/khouzami/openfpm/openfpm_install/openfpm_vcluster/lib -L/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/lib  -L/Users/khouzami/openfpm/openfpm_dependencies/METIS/lib -L/Users/khouzami/openfpm/openfpm_dependencies/PARMETIS/lib  -L/Users/khouzami/openfpm/openfpm_dependencies/BOOST/lib -L/Users/khouzami/openfpm/openfpm_dependencies/HDF5/lib -L/Users/khouzami/openfpm/openfpm_dependencies/LIBHILBERT/lib   -L/Users/khouzami/openfpm/openfpm_dependencies/PETSC/lib -L/Users/khouzami/openfpm/openfpm_dependencies/OPENBLAS/lib -L/Users/khouzami/openfpm/openfpm_dependencies/SUITESPARSE/lib  -lvcluster -lofpm_pdata -lofpmmemory -lparmetis -lmetis -lboost_iostreams -lboost_program_options -lhdf5 -llibhilbert -lVc   -lpetsc -lopenblas -lumfpack -lamd -lbtf -lcamd -lccolamd -lcholmod -lcolamd -lcxsparse -lklu -ldl -lrbio -lspqr -lsuitesparseconfig -ldl -lboost_filesystem -lboost_system -lboost_context
+/Library/Developer/CommandLineTools/usr/bin/make -C 3_vortex_in_cell/. clean all
+rm -f *.o *~ core vic *.vtk check_point *.hdf5 output*
+rm -f ../*~ core vic ../*.vtk ../check_point ../*.hdf5 ../output*
+mpic++ -O3  -g -c --std=c++14 -o main_vic_petsc.o main_vic_petsc.cpp -I -Wno-deprecated-declarations   -I.  -I/Users/khouzami/openfpm/openfpm_install/openfpm_numerics/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include/config -I/Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_data/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_vcluster/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_io/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_devices/include -I/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include  -I/Users/khouzami/openfpm/openfpm_dependencies/METIS/include -I/Users/khouzami/openfpm/openfpm_dependencies/PARMETIS/include -I/Users/khouzami/openfpm/openfpm_dependencies/BOOST/include -I/Users/khouzami/openfpm/openfpm_dependencies/HDF5/include -I/Users/khouzami/openfpm/openfpm_dependencies/LIBHILBERT/include   -I/Users/khouzami/openfpm/openfpm_dependencies/PETSC/include -I/Users/khouzami/openfpm/openfpm_dependencies/OPENBLAS/include -I/Users/khouzami/openfpm/openfpm_dependencies/SUITESPARSE/include -I/Users/khouzami/openfpm/openfpm_dependencies/EIGEN
+mpic++ -o vic_petsc main_vic_petsc.o -L/Users/khouzami/openfpm/openfpm_install/openfpm_devices/lib -L/Users/khouzami/openfpm/openfpm_install/openfpm_pdata/lib  -L/Users/khouzami/openfpm/openfpm_install/openfpm_vcluster/lib -L/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/lib  -L/Users/khouzami/openfpm/openfpm_dependencies/METIS/lib -L/Users/khouzami/openfpm/openfpm_dependencies/PARMETIS/lib  -L/Users/khouzami/openfpm/openfpm_dependencies/BOOST/lib -L/Users/khouzami/openfpm/openfpm_dependencies/HDF5/lib -L/Users/khouzami/openfpm/openfpm_dependencies/LIBHILBERT/lib   -L/Users/khouzami/openfpm/openfpm_dependencies/PETSC/lib -L/Users/khouzami/openfpm/openfpm_dependencies/OPENBLAS/lib -L/Users/khouzami/openfpm/openfpm_dependencies/SUITESPARSE/lib  -lvcluster -lofpm_pdata -lofpmmemory -lparmetis -lmetis -lboost_iostreams -lboost_program_options -lhdf5 -llibhilbert -lVc   -lpetsc -lopenblas -lumfpack -lamd -lbtf -lcamd -lccolamd -lcholmod -lcolamd -lcxsparse -lklu -ldl -lrbio -lspqr -lsuitesparseconfig -ldl -lboost_filesystem -lboost_system -lboost_context
+mpic++ -O3  -g -c --std=c++14 -o main_vic_petsc_opt.o main_vic_petsc_opt.cpp -I -Wno-deprecated-declarations   -I.  -I/Users/khouzami/openfpm/openfpm_install/openfpm_numerics/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include/config -I/Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_data/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_vcluster/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_io/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_devices/include -I/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include  -I/Users/khouzami/openfpm/openfpm_dependencies/METIS/include -I/Users/khouzami/openfpm/openfpm_dependencies/PARMETIS/include -I/Users/khouzami/openfpm/openfpm_dependencies/BOOST/include -I/Users/khouzami/openfpm/openfpm_dependencies/HDF5/include -I/Users/khouzami/openfpm/openfpm_dependencies/LIBHILBERT/include   -I/Users/khouzami/openfpm/openfpm_dependencies/PETSC/include -I/Users/khouzami/openfpm/openfpm_dependencies/OPENBLAS/include -I/Users/khouzami/openfpm/openfpm_dependencies/SUITESPARSE/include -I/Users/khouzami/openfpm/openfpm_dependencies/EIGEN
+mpic++ -o vic_petsc_opt main_vic_petsc_opt.o -L/Users/khouzami/openfpm/openfpm_install/openfpm_devices/lib -L/Users/khouzami/openfpm/openfpm_install/openfpm_pdata/lib  -L/Users/khouzami/openfpm/openfpm_install/openfpm_vcluster/lib -L/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/lib  -L/Users/khouzami/openfpm/openfpm_dependencies/METIS/lib -L/Users/khouzami/openfpm/openfpm_dependencies/PARMETIS/lib  -L/Users/khouzami/openfpm/openfpm_dependencies/BOOST/lib -L/Users/khouzami/openfpm/openfpm_dependencies/HDF5/lib -L/Users/khouzami/openfpm/openfpm_dependencies/LIBHILBERT/lib   -L/Users/khouzami/openfpm/openfpm_dependencies/PETSC/lib -L/Users/khouzami/openfpm/openfpm_dependencies/OPENBLAS/lib -L/Users/khouzami/openfpm/openfpm_dependencies/SUITESPARSE/lib  -lvcluster -lofpm_pdata -lofpmmemory -lparmetis -lmetis -lboost_iostreams -lboost_program_options -lhdf5 -llibhilbert -lVc   -lpetsc -lopenblas -lumfpack -lamd -lbtf -lcamd -lccolamd -lcholmod -lcolamd -lcxsparse -lklu -ldl -lrbio -lspqr -lsuitesparseconfig -ldl -lboost_filesystem -lboost_system -lboost_context
+make: Nothing to be done for `all'.
+S:openfpm|ERR:In file included from main.cpp:1:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include/Grid/grid_dist_id.hpp:28:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid.hpp:21:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid_iterator_block.hpp:12:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid_chunk_copy.hpp:12:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/Vc:30:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/vector.h:35:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/sse/vector.h:496:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/scalar/../common/../sse/vector.tcc:30:
+/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/scalar/../common/../sse/../common/bitscanintrinsics.h:37:13: warning: '_bit_scan_forward' macro redefined [-Wmacro-redefined]
+#    define _bit_scan_forward(x) __builtin_ctz(x)
+            ^
+/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/ia32intrin.h:72:9: note: previous definition is here
+#define _bit_scan_forward(A) __bsfd((A))
+        ^
+In file included from main.cpp:1:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include/Grid/grid_dist_id.hpp:28:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid.hpp:21:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid_iterator_block.hpp:12:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid_chunk_copy.hpp:12:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/Vc:30:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/vector.h:35:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/sse/vector.h:496:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/scalar/../common/../sse/vector.tcc:30:
+/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/scalar/../common/../sse/../common/bitscanintrinsics.h:44:13: warning: '_bit_scan_reverse' macro redefined [-Wmacro-redefined]
+#    define _bit_scan_reverse(x) _Vc_bit_scan_reverse_asm(x)
+            ^
+/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/ia32intrin.h:73:9: note: previous definition is here
+#define _bit_scan_reverse(A) __bsrd((A))
+        ^
+2 warnings generated.
+In file included from main_vic_petsc.cpp:115:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include/Grid/grid_dist_id.hpp:28:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid.hpp:21:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid_iterator_block.hpp:12:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid_chunk_copy.hpp:12:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/Vc:30:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/vector.h:35:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/sse/vector.h:496:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/scalar/../common/../sse/vector.tcc:30:
+/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/scalar/../common/../sse/../common/bitscanintrinsics.h:37:13: warning: '_bit_scan_forward' macro redefined [-Wmacro-redefined]
+#    define _bit_scan_forward(x) __builtin_ctz(x)
+            ^
+/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/ia32intrin.h:72:9: note: previous definition is here
+#define _bit_scan_forward(A) __bsfd((A))
+        ^
+In file included from main_vic_petsc.cpp:115:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include/Grid/grid_dist_id.hpp:28:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid.hpp:21:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid_iterator_block.hpp:12:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid_chunk_copy.hpp:12:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/Vc:30:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/vector.h:35:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/sse/vector.h:496:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/scalar/../common/../sse/vector.tcc:30:
+/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/scalar/../common/../sse/../common/bitscanintrinsics.h:44:13: warning: '_bit_scan_reverse' macro redefined [-Wmacro-redefined]
+#    define _bit_scan_reverse(x) _Vc_bit_scan_reverse_asm(x)
+            ^
+/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/ia32intrin.h:73:9: note: previous definition is here
+#define _bit_scan_reverse(A) __bsrd((A))
+        ^
+2 warnings generated.
+In file included from main_vic_petsc_opt.cpp:35:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include/Grid/grid_dist_id.hpp:28:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid.hpp:21:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid_iterator_block.hpp:12:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid_chunk_copy.hpp:12:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/Vc:30:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/vector.h:35:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/sse/vector.h:496:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/scalar/../common/../sse/vector.tcc:30:
+/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/scalar/../common/../sse/../common/bitscanintrinsics.h:37:13: warning: '_bit_scan_forward' macro redefined [-Wmacro-redefined]
+#    define _bit_scan_forward(x) __builtin_ctz(x)
+            ^
+/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/ia32intrin.h:72:9: note: previous definition is here
+#define _bit_scan_forward(A) __bsfd((A))
+        ^
+In file included from main_vic_petsc_opt.cpp:35:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include/Grid/grid_dist_id.hpp:28:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid.hpp:21:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid_iterator_block.hpp:12:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid_chunk_copy.hpp:12:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/Vc:30:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/vector.h:35:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/sse/vector.h:496:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/scalar/../common/../sse/vector.tcc:30:
+/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/scalar/../common/../sse/../common/bitscanintrinsics.h:44:13: warning: '_bit_scan_reverse' macro redefined [-Wmacro-redefined]
+#    define _bit_scan_reverse(x) _Vc_bit_scan_reverse_asm(x)
+            ^
+/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/ia32intrin.h:73:9: note: previous definition is here
+#define _bit_scan_reverse(A) __bsrd((A))
+        ^
+2 warnings generated.
+S:openpme|STD:/Library/Developer/CommandLineTools/usr/bin/make -C 1_lennard_jones/. clean all
+rm -f *.o *~ core md_dyn md_dyn_vl particles_*
+rm -f ../*~ core md_dyn md_dyn_vl ../particles_*
+mpic++ -O3 -g -c --std=c++14 -o main.o main.cpp -I -Wno-deprecated-declarations   -I.  -I/Users/khouzami/openfpm/openfpm_install/openfpm_numerics/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include/config -I/Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_data/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_vcluster/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_io/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_devices/include -I/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include  -I/Users/khouzami/openfpm/openfpm_dependencies/METIS/include -I/Users/khouzami/openfpm/openfpm_dependencies/PARMETIS/include -I/Users/khouzami/openfpm/openfpm_dependencies/BOOST/include -I/Users/khouzami/openfpm/openfpm_dependencies/HDF5/include -I/Users/khouzami/openfpm/openfpm_dependencies/LIBHILBERT/include   -I/Users/khouzami/openfpm/openfpm_dependencies/PETSC/include -I/Users/khouzami/openfpm/openfpm_dependencies/OPENBLAS/include -I/Users/khouzami/openfpm/openfpm_dependencies/SUITESPARSE/include -I/Users/khouzami/openfpm/openfpm_dependencies/EIGEN
+mpic++ -o md_dyn main.o  -L/Users/khouzami/openfpm/openfpm_install/openfpm_devices/lib -L/Users/khouzami/openfpm/openfpm_install/openfpm_pdata/lib  -L/Users/khouzami/openfpm/openfpm_install/openfpm_vcluster/lib -L/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/lib  -L/Users/khouzami/openfpm/openfpm_dependencies/METIS/lib -L/Users/khouzami/openfpm/openfpm_dependencies/PARMETIS/lib  -L/Users/khouzami/openfpm/openfpm_dependencies/BOOST/lib -L/Users/khouzami/openfpm/openfpm_dependencies/HDF5/lib -L/Users/khouzami/openfpm/openfpm_dependencies/LIBHILBERT/lib   -L/Users/khouzami/openfpm/openfpm_dependencies/PETSC/lib -L/Users/khouzami/openfpm/openfpm_dependencies/OPENBLAS/lib -L/Users/khouzami/openfpm/openfpm_dependencies/SUITESPARSE/lib  -lvcluster -lofpm_pdata -lofpmmemory -lparmetis -lmetis -lboost_iostreams -lboost_program_options -lhdf5 -llibhilbert -lVc   -lpetsc -lopenblas -lumfpack -lamd -lbtf -lcamd -lccolamd -lcholmod -lcolamd -lcxsparse -lklu -ldl -lrbio -lspqr -lsuitesparseconfig -ldl -lboost_filesystem -lboost_system -lboost_context
+/Library/Developer/CommandLineTools/usr/bin/make -C 2_gray_scott/. clean all
+rm -f *.o *~ core gray_scott *.vtk
+mpic++ -O3 -g -c --std=c++14 -o main.o main.cpp -I -Wno-deprecated-declarations   -I.  -I/Users/khouzami/openfpm/openfpm_install/openfpm_numerics/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include/config -I/Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_data/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_vcluster/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_io/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_devices/include -I/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include  -I/Users/khouzami/openfpm/openfpm_dependencies/METIS/include -I/Users/khouzami/openfpm/openfpm_dependencies/PARMETIS/include -I/Users/khouzami/openfpm/openfpm_dependencies/BOOST/include -I/Users/khouzami/openfpm/openfpm_dependencies/HDF5/include -I/Users/khouzami/openfpm/openfpm_dependencies/LIBHILBERT/include   -I/Users/khouzami/openfpm/openfpm_dependencies/PETSC/include -I/Users/khouzami/openfpm/openfpm_dependencies/OPENBLAS/include -I/Users/khouzami/openfpm/openfpm_dependencies/SUITESPARSE/include -I/Users/khouzami/openfpm/openfpm_dependencies/EIGEN
+mpic++ -o gray_scott main.o  -L/Users/khouzami/openfpm/openfpm_install/openfpm_devices/lib -L/Users/khouzami/openfpm/openfpm_install/openfpm_pdata/lib  -L/Users/khouzami/openfpm/openfpm_install/openfpm_vcluster/lib -L/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/lib  -L/Users/khouzami/openfpm/openfpm_dependencies/METIS/lib -L/Users/khouzami/openfpm/openfpm_dependencies/PARMETIS/lib  -L/Users/khouzami/openfpm/openfpm_dependencies/BOOST/lib -L/Users/khouzami/openfpm/openfpm_dependencies/HDF5/lib -L/Users/khouzami/openfpm/openfpm_dependencies/LIBHILBERT/lib   -L/Users/khouzami/openfpm/openfpm_dependencies/PETSC/lib -L/Users/khouzami/openfpm/openfpm_dependencies/OPENBLAS/lib -L/Users/khouzami/openfpm/openfpm_dependencies/SUITESPARSE/lib  -lvcluster -lofpm_pdata -lofpmmemory -lparmetis -lmetis -lboost_iostreams -lboost_program_options -lhdf5 -llibhilbert -lVc   -lpetsc -lopenblas -lumfpack -lamd -lbtf -lcamd -lccolamd -lcholmod -lcolamd -lcxsparse -lklu -ldl -lrbio -lspqr -lsuitesparseconfig -ldl -lboost_filesystem -lboost_system -lboost_context
+/Library/Developer/CommandLineTools/usr/bin/make -C 3_vortex_in_cell/. clean all
+rm -f *.o *~ core vic *.vtk check_point
+rm -f ../*~ core vic ../*.vtk ../check_point
+mpic++ -O3  -g -c --std=c++14 -o main_vic_petsc.o main_vic_petsc.cpp -I -Wno-deprecated-declarations   -I.  -I/Users/khouzami/openfpm/openfpm_install/openfpm_numerics/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include/config -I/Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_data/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_vcluster/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_io/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_devices/include -I/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include  -I/Users/khouzami/openfpm/openfpm_dependencies/METIS/include -I/Users/khouzami/openfpm/openfpm_dependencies/PARMETIS/include -I/Users/khouzami/openfpm/openfpm_dependencies/BOOST/include -I/Users/khouzami/openfpm/openfpm_dependencies/HDF5/include -I/Users/khouzami/openfpm/openfpm_dependencies/LIBHILBERT/include   -I/Users/khouzami/openfpm/openfpm_dependencies/PETSC/include -I/Users/khouzami/openfpm/openfpm_dependencies/OPENBLAS/include -I/Users/khouzami/openfpm/openfpm_dependencies/SUITESPARSE/include -I/Users/khouzami/openfpm/openfpm_dependencies/EIGEN
+mpic++ -o vic_petsc main_vic_petsc.o -L/Users/khouzami/openfpm/openfpm_install/openfpm_devices/lib -L/Users/khouzami/openfpm/openfpm_install/openfpm_pdata/lib  -L/Users/khouzami/openfpm/openfpm_install/openfpm_vcluster/lib -L/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/lib  -L/Users/khouzami/openfpm/openfpm_dependencies/METIS/lib -L/Users/khouzami/openfpm/openfpm_dependencies/PARMETIS/lib  -L/Users/khouzami/openfpm/openfpm_dependencies/BOOST/lib -L/Users/khouzami/openfpm/openfpm_dependencies/HDF5/lib -L/Users/khouzami/openfpm/openfpm_dependencies/LIBHILBERT/lib   -L/Users/khouzami/openfpm/openfpm_dependencies/PETSC/lib -L/Users/khouzami/openfpm/openfpm_dependencies/OPENBLAS/lib -L/Users/khouzami/openfpm/openfpm_dependencies/SUITESPARSE/lib  -lvcluster -lofpm_pdata -lofpmmemory -lparmetis -lmetis -lboost_iostreams -lboost_program_options -lhdf5 -llibhilbert -lVc   -lpetsc -lopenblas -lumfpack -lamd -lbtf -lcamd -lccolamd -lcholmod -lcolamd -lcxsparse -lklu -ldl -lrbio -lspqr -lsuitesparseconfig -ldl -lboost_filesystem -lboost_system -lboost_context
+make: Nothing to be done for `all'.
+S:openpme|ERR:In file included from main.cpp:3:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include/Grid/grid_dist_id.hpp:28:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid.hpp:21:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid_iterator_block.hpp:12:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid_chunk_copy.hpp:12:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/Vc:30:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/vector.h:35:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/sse/vector.h:496:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/scalar/../common/../sse/vector.tcc:30:
+/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/scalar/../common/../sse/../common/bitscanintrinsics.h:37:13: warning: '_bit_scan_forward' macro redefined [-Wmacro-redefined]
+#    define _bit_scan_forward(x) __builtin_ctz(x)
+            ^
+/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/ia32intrin.h:72:9: note: previous definition is here
+#define _bit_scan_forward(A) __bsfd((A))
+        ^
+In file included from main.cpp:3:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include/Grid/grid_dist_id.hpp:28:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid.hpp:21:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid_iterator_block.hpp:12:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid_chunk_copy.hpp:12:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/Vc:30:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/vector.h:35:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/sse/vector.h:496:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/scalar/../common/../sse/vector.tcc:30:
+/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/scalar/../common/../sse/../common/bitscanintrinsics.h:44:13: warning: '_bit_scan_reverse' macro redefined [-Wmacro-redefined]
+#    define _bit_scan_reverse(x) _Vc_bit_scan_reverse_asm(x)
+            ^
+/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/ia32intrin.h:73:9: note: previous definition is here
+#define _bit_scan_reverse(A) __bsrd((A))
+        ^
+2 warnings generated.
+In file included from main.cpp:3:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include/Grid/grid_dist_id.hpp:28:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid.hpp:21:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid_iterator_block.hpp:12:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid_chunk_copy.hpp:12:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/Vc:30:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/vector.h:35:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/sse/vector.h:496:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/scalar/../common/../sse/vector.tcc:30:
+/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/scalar/../common/../sse/../common/bitscanintrinsics.h:37:13: warning: '_bit_scan_forward' macro redefined [-Wmacro-redefined]
+#    define _bit_scan_forward(x) __builtin_ctz(x)
+            ^
+/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/ia32intrin.h:72:9: note: previous definition is here
+#define _bit_scan_forward(A) __bsfd((A))
+        ^
+In file included from main.cpp:3:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include/Grid/grid_dist_id.hpp:28:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid.hpp:21:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid_iterator_block.hpp:12:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid_chunk_copy.hpp:12:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/Vc:30:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/vector.h:35:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/sse/vector.h:496:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/scalar/../common/../sse/vector.tcc:30:
+/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/scalar/../common/../sse/../common/bitscanintrinsics.h:44:13: warning: '_bit_scan_reverse' macro redefined [-Wmacro-redefined]
+#    define _bit_scan_reverse(x) _Vc_bit_scan_reverse_asm(x)
+            ^
+/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/ia32intrin.h:73:9: note: previous definition is here
+#define _bit_scan_reverse(A) __bsrd((A))
+        ^
+2 warnings generated.
+In file included from main_vic_petsc.cpp:3:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include/Grid/grid_dist_id.hpp:28:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid.hpp:21:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid_iterator_block.hpp:12:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid_chunk_copy.hpp:12:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/Vc:30:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/vector.h:35:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/sse/vector.h:496:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/scalar/../common/../sse/vector.tcc:30:
+/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/scalar/../common/../sse/../common/bitscanintrinsics.h:37:13: warning: '_bit_scan_forward' macro redefined [-Wmacro-redefined]
+#    define _bit_scan_forward(x) __builtin_ctz(x)
+            ^
+/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/ia32intrin.h:72:9: note: previous definition is here
+#define _bit_scan_forward(A) __bsfd((A))
+        ^
+In file included from main_vic_petsc.cpp:3:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include/Grid/grid_dist_id.hpp:28:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid.hpp:21:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid_iterator_block.hpp:12:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid_chunk_copy.hpp:12:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/Vc:30:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/vector.h:35:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/sse/vector.h:496:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/scalar/../common/../sse/vector.tcc:30:
+/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/scalar/../common/../sse/../common/bitscanintrinsics.h:44:13: warning: '_bit_scan_reverse' macro redefined [-Wmacro-redefined]
+#    define _bit_scan_reverse(x) _Vc_bit_scan_reverse_asm(x)
+            ^
+/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/ia32intrin.h:73:9: note: previous definition is here
+#define _bit_scan_reverse(A) __bsrd((A))
+        ^
+2 warnings generated.
+S:openfpm|STD:/Library/Developer/CommandLineTools/usr/bin/make -C 1_lennard_jones/. clean all
+rm -f *.o *~ core md_dyn md_dyn_vl particles_*
+rm -f ../*~ core md_dyn md_dyn_vl ../particles_*
+mpic++ -O3 -g -c --std=c++14 -o main.o main.cpp -I -Wno-deprecated-declarations   -I.  -I/Users/khouzami/openfpm/openfpm_install/openfpm_numerics/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include/config -I/Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_data/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_vcluster/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_io/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_devices/include -I/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include  -I/Users/khouzami/openfpm/openfpm_dependencies/METIS/include -I/Users/khouzami/openfpm/openfpm_dependencies/PARMETIS/include -I/Users/khouzami/openfpm/openfpm_dependencies/BOOST/include -I/Users/khouzami/openfpm/openfpm_dependencies/HDF5/include -I/Users/khouzami/openfpm/openfpm_dependencies/LIBHILBERT/include   -I/Users/khouzami/openfpm/openfpm_dependencies/PETSC/include -I/Users/khouzami/openfpm/openfpm_dependencies/OPENBLAS/include -I/Users/khouzami/openfpm/openfpm_dependencies/SUITESPARSE/include -I/Users/khouzami/openfpm/openfpm_dependencies/EIGEN
+mpic++ -o md_dyn main.o  -L/Users/khouzami/openfpm/openfpm_install/openfpm_devices/lib -L/Users/khouzami/openfpm/openfpm_install/openfpm_pdata/lib  -L/Users/khouzami/openfpm/openfpm_install/openfpm_vcluster/lib -L/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/lib  -L/Users/khouzami/openfpm/openfpm_dependencies/METIS/lib -L/Users/khouzami/openfpm/openfpm_dependencies/PARMETIS/lib  -L/Users/khouzami/openfpm/openfpm_dependencies/BOOST/lib -L/Users/khouzami/openfpm/openfpm_dependencies/HDF5/lib -L/Users/khouzami/openfpm/openfpm_dependencies/LIBHILBERT/lib   -L/Users/khouzami/openfpm/openfpm_dependencies/PETSC/lib -L/Users/khouzami/openfpm/openfpm_dependencies/OPENBLAS/lib -L/Users/khouzami/openfpm/openfpm_dependencies/SUITESPARSE/lib  -lvcluster -lofpm_pdata -lofpmmemory -lparmetis -lmetis -lboost_iostreams -lboost_program_options -lhdf5 -llibhilbert -lVc   -lpetsc -lopenblas -lumfpack -lamd -lbtf -lcamd -lccolamd -lcholmod -lcolamd -lcxsparse -lklu -ldl -lrbio -lspqr -lsuitesparseconfig -ldl -lboost_filesystem -lboost_system -lboost_context
+mpic++ -O3 -g -c --std=c++14 -o main_vl.o main_vl.cpp -I -Wno-deprecated-declarations   -I.  -I/Users/khouzami/openfpm/openfpm_install/openfpm_numerics/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include/config -I/Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_data/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_vcluster/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_io/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_devices/include -I/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include  -I/Users/khouzami/openfpm/openfpm_dependencies/METIS/include -I/Users/khouzami/openfpm/openfpm_dependencies/PARMETIS/include -I/Users/khouzami/openfpm/openfpm_dependencies/BOOST/include -I/Users/khouzami/openfpm/openfpm_dependencies/HDF5/include -I/Users/khouzami/openfpm/openfpm_dependencies/LIBHILBERT/include   -I/Users/khouzami/openfpm/openfpm_dependencies/PETSC/include -I/Users/khouzami/openfpm/openfpm_dependencies/OPENBLAS/include -I/Users/khouzami/openfpm/openfpm_dependencies/SUITESPARSE/include -I/Users/khouzami/openfpm/openfpm_dependencies/EIGEN
+mpic++ -o md_dyn_vl main_vl.o  -L/Users/khouzami/openfpm/openfpm_install/openfpm_devices/lib -L/Users/khouzami/openfpm/openfpm_install/openfpm_pdata/lib  -L/Users/khouzami/openfpm/openfpm_install/openfpm_vcluster/lib -L/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/lib  -L/Users/khouzami/openfpm/openfpm_dependencies/METIS/lib -L/Users/khouzami/openfpm/openfpm_dependencies/PARMETIS/lib  -L/Users/khouzami/openfpm/openfpm_dependencies/BOOST/lib -L/Users/khouzami/openfpm/openfpm_dependencies/HDF5/lib -L/Users/khouzami/openfpm/openfpm_dependencies/LIBHILBERT/lib   -L/Users/khouzami/openfpm/openfpm_dependencies/PETSC/lib -L/Users/khouzami/openfpm/openfpm_dependencies/OPENBLAS/lib -L/Users/khouzami/openfpm/openfpm_dependencies/SUITESPARSE/lib  -lvcluster -lofpm_pdata -lofpmmemory -lparmetis -lmetis -lboost_iostreams -lboost_program_options -lhdf5 -llibhilbert -lVc   -lpetsc -lopenblas -lumfpack -lamd -lbtf -lcamd -lccolamd -lcholmod -lcolamd -lcxsparse -lklu -ldl -lrbio -lspqr -lsuitesparseconfig -ldl -lboost_filesystem -lboost_system -lboost_context
+/Library/Developer/CommandLineTools/usr/bin/make -C 2_gray_scott/. clean all
+rm -f *.o *~ core gray_scott *.vtk
+rm -f ../*~ ../*.vtk
+mpic++ -O3 -g -c --std=c++14 -o main.o main.cpp -I -Wno-deprecated-declarations   -I.  -I/Users/khouzami/openfpm/openfpm_install/openfpm_numerics/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include/config -I/Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_data/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_vcluster/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_io/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_devices/include -I/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include  -I/Users/khouzami/openfpm/openfpm_dependencies/METIS/include -I/Users/khouzami/openfpm/openfpm_dependencies/PARMETIS/include -I/Users/khouzami/openfpm/openfpm_dependencies/BOOST/include -I/Users/khouzami/openfpm/openfpm_dependencies/HDF5/include -I/Users/khouzami/openfpm/openfpm_dependencies/LIBHILBERT/include   -I/Users/khouzami/openfpm/openfpm_dependencies/PETSC/include -I/Users/khouzami/openfpm/openfpm_dependencies/OPENBLAS/include -I/Users/khouzami/openfpm/openfpm_dependencies/SUITESPARSE/include -I/Users/khouzami/openfpm/openfpm_dependencies/EIGEN
+mpic++ -o gray_scott main.o  -L/Users/khouzami/openfpm/openfpm_install/openfpm_devices/lib -L/Users/khouzami/openfpm/openfpm_install/openfpm_pdata/lib  -L/Users/khouzami/openfpm/openfpm_install/openfpm_vcluster/lib -L/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/lib  -L/Users/khouzami/openfpm/openfpm_dependencies/METIS/lib -L/Users/khouzami/openfpm/openfpm_dependencies/PARMETIS/lib  -L/Users/khouzami/openfpm/openfpm_dependencies/BOOST/lib -L/Users/khouzami/openfpm/openfpm_dependencies/HDF5/lib -L/Users/khouzami/openfpm/openfpm_dependencies/LIBHILBERT/lib   -L/Users/khouzami/openfpm/openfpm_dependencies/PETSC/lib -L/Users/khouzami/openfpm/openfpm_dependencies/OPENBLAS/lib -L/Users/khouzami/openfpm/openfpm_dependencies/SUITESPARSE/lib  -lvcluster -lofpm_pdata -lofpmmemory -lparmetis -lmetis -lboost_iostreams -lboost_program_options -lhdf5 -llibhilbert -lVc   -lpetsc -lopenblas -lumfpack -lamd -lbtf -lcamd -lccolamd -lcholmod -lcolamd -lcxsparse -lklu -ldl -lrbio -lspqr -lsuitesparseconfig -ldl -lboost_filesystem -lboost_system -lboost_context
+/Library/Developer/CommandLineTools/usr/bin/make -C 3_vortex_in_cell/. clean all
+rm -f *.o *~ core vic *.vtk check_point *.hdf5 output*
+rm -f ../*~ core vic ../*.vtk ../check_point ../*.hdf5 ../output*
+mpic++ -O3  -g -c --std=c++14 -o main_vic_petsc.o main_vic_petsc.cpp -I -Wno-deprecated-declarations   -I.  -I/Users/khouzami/openfpm/openfpm_install/openfpm_numerics/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include/config -I/Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_data/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_vcluster/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_io/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_devices/include -I/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include  -I/Users/khouzami/openfpm/openfpm_dependencies/METIS/include -I/Users/khouzami/openfpm/openfpm_dependencies/PARMETIS/include -I/Users/khouzami/openfpm/openfpm_dependencies/BOOST/include -I/Users/khouzami/openfpm/openfpm_dependencies/HDF5/include -I/Users/khouzami/openfpm/openfpm_dependencies/LIBHILBERT/include   -I/Users/khouzami/openfpm/openfpm_dependencies/PETSC/include -I/Users/khouzami/openfpm/openfpm_dependencies/OPENBLAS/include -I/Users/khouzami/openfpm/openfpm_dependencies/SUITESPARSE/include -I/Users/khouzami/openfpm/openfpm_dependencies/EIGEN
+mpic++ -o vic_petsc main_vic_petsc.o -L/Users/khouzami/openfpm/openfpm_install/openfpm_devices/lib -L/Users/khouzami/openfpm/openfpm_install/openfpm_pdata/lib  -L/Users/khouzami/openfpm/openfpm_install/openfpm_vcluster/lib -L/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/lib  -L/Users/khouzami/openfpm/openfpm_dependencies/METIS/lib -L/Users/khouzami/openfpm/openfpm_dependencies/PARMETIS/lib  -L/Users/khouzami/openfpm/openfpm_dependencies/BOOST/lib -L/Users/khouzami/openfpm/openfpm_dependencies/HDF5/lib -L/Users/khouzami/openfpm/openfpm_dependencies/LIBHILBERT/lib   -L/Users/khouzami/openfpm/openfpm_dependencies/PETSC/lib -L/Users/khouzami/openfpm/openfpm_dependencies/OPENBLAS/lib -L/Users/khouzami/openfpm/openfpm_dependencies/SUITESPARSE/lib  -lvcluster -lofpm_pdata -lofpmmemory -lparmetis -lmetis -lboost_iostreams -lboost_program_options -lhdf5 -llibhilbert -lVc   -lpetsc -lopenblas -lumfpack -lamd -lbtf -lcamd -lccolamd -lcholmod -lcolamd -lcxsparse -lklu -ldl -lrbio -lspqr -lsuitesparseconfig -ldl -lboost_filesystem -lboost_system -lboost_context
+mpic++ -O3  -g -c --std=c++14 -o main_vic_petsc_opt.o main_vic_petsc_opt.cpp -I -Wno-deprecated-declarations   -I.  -I/Users/khouzami/openfpm/openfpm_install/openfpm_numerics/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include/config -I/Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_data/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_vcluster/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_io/include -I/Users/khouzami/openfpm/openfpm_install/openfpm_devices/include -I/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include  -I/Users/khouzami/openfpm/openfpm_dependencies/METIS/include -I/Users/khouzami/openfpm/openfpm_dependencies/PARMETIS/include -I/Users/khouzami/openfpm/openfpm_dependencies/BOOST/include -I/Users/khouzami/openfpm/openfpm_dependencies/HDF5/include -I/Users/khouzami/openfpm/openfpm_dependencies/LIBHILBERT/include   -I/Users/khouzami/openfpm/openfpm_dependencies/PETSC/include -I/Users/khouzami/openfpm/openfpm_dependencies/OPENBLAS/include -I/Users/khouzami/openfpm/openfpm_dependencies/SUITESPARSE/include -I/Users/khouzami/openfpm/openfpm_dependencies/EIGEN
+mpic++ -o vic_petsc_opt main_vic_petsc_opt.o -L/Users/khouzami/openfpm/openfpm_install/openfpm_devices/lib -L/Users/khouzami/openfpm/openfpm_install/openfpm_pdata/lib  -L/Users/khouzami/openfpm/openfpm_install/openfpm_vcluster/lib -L/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/lib  -L/Users/khouzami/openfpm/openfpm_dependencies/METIS/lib -L/Users/khouzami/openfpm/openfpm_dependencies/PARMETIS/lib  -L/Users/khouzami/openfpm/openfpm_dependencies/BOOST/lib -L/Users/khouzami/openfpm/openfpm_dependencies/HDF5/lib -L/Users/khouzami/openfpm/openfpm_dependencies/LIBHILBERT/lib   -L/Users/khouzami/openfpm/openfpm_dependencies/PETSC/lib -L/Users/khouzami/openfpm/openfpm_dependencies/OPENBLAS/lib -L/Users/khouzami/openfpm/openfpm_dependencies/SUITESPARSE/lib  -lvcluster -lofpm_pdata -lofpmmemory -lparmetis -lmetis -lboost_iostreams -lboost_program_options -lhdf5 -llibhilbert -lVc   -lpetsc -lopenblas -lumfpack -lamd -lbtf -lcamd -lccolamd -lcholmod -lcolamd -lcxsparse -lklu -ldl -lrbio -lspqr -lsuitesparseconfig -ldl -lboost_filesystem -lboost_system -lboost_context
+make: Nothing to be done for `all'.
+S:openfpm|ERR:In file included from main.cpp:1:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include/Grid/grid_dist_id.hpp:28:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid.hpp:21:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid_iterator_block.hpp:12:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid_chunk_copy.hpp:12:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/Vc:30:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/vector.h:35:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/sse/vector.h:496:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/scalar/../common/../sse/vector.tcc:30:
+/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/scalar/../common/../sse/../common/bitscanintrinsics.h:37:13: warning: '_bit_scan_forward' macro redefined [-Wmacro-redefined]
+#    define _bit_scan_forward(x) __builtin_ctz(x)
+            ^
+/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/ia32intrin.h:72:9: note: previous definition is here
+#define _bit_scan_forward(A) __bsfd((A))
+        ^
+In file included from main.cpp:1:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include/Grid/grid_dist_id.hpp:28:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid.hpp:21:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid_iterator_block.hpp:12:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid_chunk_copy.hpp:12:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/Vc:30:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/vector.h:35:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/sse/vector.h:496:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/scalar/../common/../sse/vector.tcc:30:
+/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/scalar/../common/../sse/../common/bitscanintrinsics.h:44:13: warning: '_bit_scan_reverse' macro redefined [-Wmacro-redefined]
+#    define _bit_scan_reverse(x) _Vc_bit_scan_reverse_asm(x)
+            ^
+/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/ia32intrin.h:73:9: note: previous definition is here
+#define _bit_scan_reverse(A) __bsrd((A))
+        ^
+2 warnings generated.
+In file included from main_vic_petsc.cpp:115:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include/Grid/grid_dist_id.hpp:28:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid.hpp:21:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid_iterator_block.hpp:12:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid_chunk_copy.hpp:12:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/Vc:30:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/vector.h:35:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/sse/vector.h:496:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/scalar/../common/../sse/vector.tcc:30:
+/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/scalar/../common/../sse/../common/bitscanintrinsics.h:37:13: warning: '_bit_scan_forward' macro redefined [-Wmacro-redefined]
+#    define _bit_scan_forward(x) __builtin_ctz(x)
+            ^
+/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/ia32intrin.h:72:9: note: previous definition is here
+#define _bit_scan_forward(A) __bsfd((A))
+        ^
+In file included from main_vic_petsc.cpp:115:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include/Grid/grid_dist_id.hpp:28:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid.hpp:21:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid_iterator_block.hpp:12:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid_chunk_copy.hpp:12:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/Vc:30:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/vector.h:35:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/sse/vector.h:496:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/scalar/../common/../sse/vector.tcc:30:
+/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/scalar/../common/../sse/../common/bitscanintrinsics.h:44:13: warning: '_bit_scan_reverse' macro redefined [-Wmacro-redefined]
+#    define _bit_scan_reverse(x) _Vc_bit_scan_reverse_asm(x)
+            ^
+/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/ia32intrin.h:73:9: note: previous definition is here
+#define _bit_scan_reverse(A) __bsrd((A))
+        ^
+2 warnings generated.
+In file included from main_vic_petsc_opt.cpp:35:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include/Grid/grid_dist_id.hpp:28:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid.hpp:21:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid_iterator_block.hpp:12:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid_chunk_copy.hpp:12:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/Vc:30:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/vector.h:35:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/sse/vector.h:496:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/scalar/../common/../sse/vector.tcc:30:
+/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/scalar/../common/../sse/../common/bitscanintrinsics.h:37:13: warning: '_bit_scan_forward' macro redefined [-Wmacro-redefined]
+#    define _bit_scan_forward(x) __builtin_ctz(x)
+            ^
+/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/ia32intrin.h:72:9: note: previous definition is here
+#define _bit_scan_forward(A) __bsfd((A))
+        ^
+In file included from main_vic_petsc_opt.cpp:35:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_pdata/include/Grid/grid_dist_id.hpp:28:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid.hpp:21:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid_iterator_block.hpp:12:
+In file included from /Users/khouzami/openfpm/openfpm_install/openfpm_data/include/SparseGrid/SparseGrid_chunk_copy.hpp:12:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/Vc:30:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/vector.h:35:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/sse/vector.h:496:
+In file included from /Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/scalar/../common/../sse/vector.tcc:30:
+/Users/khouzami/openfpm/openfpm_dependencies/VCDEVEL/include/Vc/scalar/../common/../sse/../common/bitscanintrinsics.h:44:13: warning: '_bit_scan_reverse' macro redefined [-Wmacro-redefined]
+#    define _bit_scan_reverse(x) _Vc_bit_scan_reverse_asm(x)
+            ^
+/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/ia32intrin.h:73:9: note: previous definition is here
+#define _bit_scan_reverse(A) __bsrd((A))
+        ^
+2 warnings generated.
